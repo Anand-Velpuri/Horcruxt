@@ -1,0 +1,147 @@
+/* Harry Potter GenAI Custom Styles */
+
+/* Custom scrollbar for chat */
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Magical glow effects */
+.magical-glow {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.magical-glow:hover {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+}
+
+/* House-specific glows */
+.gryffindor-glow {
+  box-shadow: 0 0 20px rgba(116, 0, 1, 0.3);
+}
+
+.gryffindor-glow:hover {
+  box-shadow: 0 0 30px rgba(116, 0, 1, 0.6);
+}
+
+.slytherin-glow {
+  box-shadow: 0 0 20px rgba(26, 71, 42, 0.3);
+}
+
+.slytherin-glow:hover {
+  box-shadow: 0 0 30px rgba(26, 71, 42, 0.6);
+}
+
+/* Wand cursor effect */
+.wand-cursor {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23FFD700"><path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"/></svg>'),
+    auto;
+}
+
+/* Magical text reveal */
+.magical-text {
+  background: linear-gradient(45deg, #ffd700, #ffa500, #ffd700);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: magical-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes magical-shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Floating particles effect */
+.particles {
+  position: relative;
+  overflow: hidden;
+}
+
+.particles::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 215, 0, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 215, 0, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(255, 215, 0, 0.05) 0%,
+      transparent 50%
+    );
+  animation: particle-float 20s ease-in-out infinite;
+}
+
+@keyframes particle-float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(120deg);
+  }
+  66% {
+    transform: translateY(10px) rotate(240deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .character-card {
+    transform: none !important;
+  }
+
+  .character-card:hover {
+    transform: translateY(-5px) !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .hogwarts-gradient {
+    background: linear-gradient(135deg, #1a0000 0%, #0a0a1a 50%, #1a2a1a 100%);
+  }
+}
+
+/* Print styles */
+@media print {
+  .hogwarts-gradient {
+    background: white !important;
+    color: black !important;
+  }
+
+  .character-card {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+}
