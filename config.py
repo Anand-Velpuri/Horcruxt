@@ -3,7 +3,7 @@ import os
 # OpenAI API Configuration
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL")
-OPENAI_MODEL = "provider-5/chatgpt-4o-latest"
+OPENAI_MODEL = "provider-1/gemma-2-27b-it"
 
 # Flask Configuration
 SECRET_KEY = 'harry_potter_magic_key_2024'
